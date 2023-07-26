@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--This webpage makes use of the window method (prototype function) known as window.open() in order to open a window in your browser without including a link.-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Password: 199</title>
+    </head>
+    <body>
+        <input class = "password" placeholder = "What's your name?">
+        <button class = "submit">Submit</button>
+        
+        
+        
+        <script>
+            var url = "https://mimicoctopus1.github.io/199";
+            var password = ["alexander", "odie", "odom", "jili", "jilien", "jilien", "tanner", "ellie", "elly", "sam", "atticus"];
+            
+            
+            
+            
+            var passwordEntry = document.getElementsByClassName("password")[0];
+            var submitButton = document.getElementsByClassName("submit")[0];
+            var submit = function() {
+                submitButton.innerHTML = ("Did nothing happen? Allow popups near your address bar and reload.");
+                if(password.includes(passwordEntry.value.toLowerCase())) {
+                    var popup = window.open(url);
+                } else {
+                    submitButton.innerHTML = "Access Denied!";
+                }
+            }
+            submitButton.addEventListener("click", submit);
+        </script>
+    </body>
+</html>
